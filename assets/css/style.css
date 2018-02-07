@@ -45,6 +45,8 @@ hr {
     background-color: #4aaaa5;
     font-family: 'Georgia', Times, Times New Roman, serif;
     color: white;
+    /* guessing there's some negative margin here? had to zero out to meet the containerx    */
+    margin-left: 0px;
     /* text-align: center; */
     font-size: 20px;
     text-transform:uppercase;
@@ -163,11 +165,11 @@ form textarea {
     line-height: 50px;
 }
 
-@media screen and (max-width: 992px) {
+/* @media screen and (max-width: 768px) {
     #profile-pic {
         width: 100%;
         max-width: 400px;
         float: none;
         margin: 20px auto;
     }
-}
+} */
