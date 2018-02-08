@@ -1,7 +1,17 @@
 html {
     position: relative;
     min-height: 100%;
-  }
+}
+
+
+  body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    background-color: #eee;
+    background-image: url("../images/circles-dark.png");
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    color: #777777;
+}
 
 .footer {
     position: absolute;
@@ -21,14 +31,6 @@ html {
     text-align: center;
 }
 
-body {
-    /* Margin bottom by footer height */
-    margin-bottom: 60px;
-    background-color: #eee;
-    background-image: url("../images/circles-dark.png");
-    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-    color: #777777;
-}
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Georgia', Times, Times New Roman, serif;
@@ -146,13 +148,14 @@ form textarea {
 /* PORTFOLIO PAGE */
 
 .portfolio-project {
-    width: 285px;
-    height: 200px;
+    /* width: 285px;
+    height: 200px; */
     margin: 20px;
     position: relative;
-    float: left;
+    display: inline-block;
 
 }
+
 
 .project-banner {
     width: 100%;
