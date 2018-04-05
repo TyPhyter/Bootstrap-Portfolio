@@ -53,6 +53,10 @@ $(document).ready(function () {
             $navbar.removeClass("scrolled sticky");
         }
     });
+    var nameTimeLine = new TimelineMax();
+    nameTimeLine.to("#SVGnameText", 3, {attr:{x:0}, ease:SteppedEase.config(12)});
+    nameTimeLine.to("#SVGnameText", 2, {attr:{y:75}, ease:Power1.easeOut});
+
 });
 
 $(".flip3d-card").flip({

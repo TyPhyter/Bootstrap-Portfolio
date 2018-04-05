@@ -26,119 +26,135 @@
 	<div id="wrap">
 
 		<div class="jumbotron fill-screen">
-			<div class="container">
-				<h1>TYLER JENKINS</h1>
-			</div>
-			<nav class="navbar navbar-default">
-				<div class="container">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
-							<!-- Only "visible" to screen readers -->
-							<span class="sr-only">Toggle navigation</span>
-							<!-- Hamburger icon -->
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<div class="navbar-brand glitch" data-text="Tyler Jenkins" id="name-card">
-							Tyler Jenkins
-						</div>
-					</div>
-					<ul class="nav navbar-nav navbar-right collapse navbar-collapse" id="navbar-collapse-1">
-						<li class="active">
-							<a href="index.html">About
-								<span class="sr-only">(current)</span>
-							</a>
-						</li>
-						<li>
-							<a href="portfolio.html">Portfolio
-								<span class="sr-only">(current)</span>
-							</a>
-						</li>
-						<li>
-							<a href="contact.html">Contact
-								<span class="sr-only">(current)</span>
-							</a>
-						</li>
-					</ul>
+			<!-- https://codepen.io/dudleystorey/pen/QvvEYQ -->
+			<header>
+				<div>
+					<video autoplay playsinline muted loop preload poster="./assets/videos/Black-Keys/Black_Keys.jpg">
+						<source src="./assets/videos/Black-Keys/Black_Keys.webm" />
+						<source src="./assets/videos/Black-Keys/Black_Keys.mp4" />
+					</video>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+						<defs>
+							<mask id="mask" x="0" y="0" width="100%" height="100%">
+								<rect x="0" y="0" width="100%" height="100%" />
+								<text x="100" y="50" id="SVGnameText">TYLER JENKINS</text>
+							</mask>
+						</defs>
+						<rect x="0" y="0" width="100%" height="100%" style="fill:#1c1c1c" />
+					</svg>
 				</div>
-			</nav>
+			</header>
 		</div>
-
-
-		<div class="panel panel-default" id="sidebar">
-			<!-- <div class="panel-heading">
-						<h2 class="panel-title">Connect With Me</h2>
-					</div> -->
-			<div class="panel-body flex-center">
-				<ul>
-					<li class="pull-left">
-						<a href="https://www.linkedin.com/in/tyler-jenkins-834a5b4b/">
-							<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTkgMGgtMTRjLTIuNzYxIDAtNSAyLjIzOS01IDV2MTRjMCAyLjc2MSAyLjIzOSA1IDUgNWgxNGMyLjc2MiAwIDUtMi4yMzkgNS01di0xNGMwLTIuNzYxLTIuMjM4LTUtNS01em0tMTEgMTloLTN2LTExaDN2MTF6bS0xLjUtMTIuMjY4Yy0uOTY2IDAtMS43NS0uNzktMS43NS0xLjc2NHMuNzg0LTEuNzY0IDEuNzUtMS43NjQgMS43NS43OSAxLjc1IDEuNzY0LS43ODMgMS43NjQtMS43NSAxLjc2NHptMTMuNSAxMi4yNjhoLTN2LTUuNjA0YzAtMy4zNjgtNC0zLjExMy00IDB2NS42MDRoLTN2LTExaDN2MS43NjVjMS4zOTYtMi41ODYgNy0yLjc3NyA3IDIuNDc2djYuNzU5eiIvPjwvc3ZnPg==">
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+						<!-- Only "visible" to screen readers -->
+						<span class="sr-only">Toggle navigation</span>
+						<!-- Hamburger icon -->
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<div class="navbar-brand glitch" data-text="Tyler Jenkins" id="name-card">
+						Tyler Jenkins
+					</div>
+				</div>
+				<ul class="nav navbar-nav navbar-right collapse navbar-collapse" id="navbar-collapse-1">
+					<li class="active">
+						<a href="index.html">About
+							<span class="sr-only">(current)</span>
 						</a>
 					</li>
-					<li class="pull-left">
-						<a href="https://github.com/TyPhyter">
-							<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTkgMGgtMTRjLTIuNzYxIDAtNSAyLjIzOS01IDV2MTRjMCAyLjc2MSAyLjIzOSA1IDUgNWgxNGMyLjc2MiAwIDUtMi4yMzkgNS01di0xNGMwLTIuNzYxLTIuMjM4LTUtNS01em0tNC40NjYgMTkuNTljLS40MDUuMDc4LS41MzQtLjE3MS0uNTM0LS4zODR2LTIuMTk1YzAtLjc0Ny0uMjYyLTEuMjMzLS41NS0xLjQ4MSAxLjc4Mi0uMTk4IDMuNjU0LS44NzUgMy42NTQtMy45NDcgMC0uODc0LS4zMTItMS41ODgtLjgyMy0yLjE0Ny4wODItLjIwMi4zNTYtMS4wMTYtLjA3OS0yLjExNyAwIDAtLjY3MS0uMjE1LTIuMTk4LjgyLS42NC0uMTgtMS4zMjQtLjI2Ny0yLjAwNC0uMjcxLS42OC4wMDMtMS4zNjQuMDkxLTIuMDAzLjI2OS0xLjUyOC0xLjAzNS0yLjItLjgyLTIuMi0uODItLjQzNCAxLjEwMi0uMTYgMS45MTUtLjA3NyAyLjExOC0uNTEyLjU2LS44MjQgMS4yNzMtLjgyNCAyLjE0NyAwIDMuMDY0IDEuODY3IDMuNzUxIDMuNjQ1IDMuOTU0LS4yMjkuMi0uNDM2LjU1Mi0uNTA4IDEuMDctLjQ1Ny4yMDQtMS42MTQuNTU3LTIuMzI4LS42NjYgMCAwLS40MjMtLjc2OC0xLjIyNy0uODI1IDAgMC0uNzgtLjAxLS4wNTUuNDg3IDAgMCAuNTI1LjI0Ni44ODkgMS4xNyAwIDAgLjQ2MyAxLjQyOCAyLjY4OC45NDR2MS40ODljMCAuMjExLS4xMjkuNDU5LS41MjguMzg1LTMuMTgtMS4wNTctNS40NzItNC4wNTYtNS40NzItNy41OSAwLTQuNDE5IDMuNTgyLTggOC04czggMy41ODEgOCA4YzAgMy41MzMtMi4yODkgNi41MzEtNS40NjYgNy41OXoiLz48L3N2Zz4=">
+					<li>
+						<a href="portfolio.html">Portfolio
+							<span class="sr-only">(current)</span>
 						</a>
 					</li>
-					<li class="pull-left">
-						<a href="https://stackoverflow.com/users/2226317/user2226317">
-							<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMCAwdjI0aDI0di0yNGgtMjR6bTEwLjQ4OCA4LjI3Mmw1LjUzMSAzLjI0My0uNjg2IDEuMTYyLTUuNTMyLTMuMjQzLjY4Ny0xLjE2MnptLTEuNDU2IDMuMTEzbDYuMTg1IDEuNzM5LS4zMzEgMS4yMy02LjIwNC0xLjY2Ny4zNS0xLjMwMnptLS42NzIgMi44MTNsNi40OTguNjUtLjExOCAxLjI4LTYuNTA0LS41ODYuMTI0LTEuMzQ0em0tLjE5MyAyLjQ2OWg2LjY2N3YxLjMzM2gtNi42Njd2LTEuMzMzem04LjgzMyAzLjMzM2gtMTF2LTdoMXY2aDl2LTZoMXY3em0tLjg1Mi04LjcwNGwtMy41Ni01LjIxOSAxLjExNS0uNzYgMy41NTkgNS4yMTktMS4xMTQuNzZ6bTEuMzU2LS44NDFsLTEuMDgtNi4yMjQgMS4zMjgtLjIzMSAxLjA4MSA2LjIyNC0xLjMyOS4yMzF6Ii8+PC9zdmc+">
+					<li>
+						<a href="contact.html">Contact
+							<span class="sr-only">(current)</span>
 						</a>
 					</li>
 				</ul>
 			</div>
+		</nav>
+	</div>
+
+
+	<div class="panel panel-default" id="sidebar">
+		<!-- <div class="panel-heading">
+						<h2 class="panel-title">Connect With Me</h2>
+					</div> -->
+		<div class="panel-body flex-center">
+			<ul>
+				<li class="pull-left">
+					<a href="https://www.linkedin.com/in/tyler-jenkins-834a5b4b/">
+						<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTkgMGgtMTRjLTIuNzYxIDAtNSAyLjIzOS01IDV2MTRjMCAyLjc2MSAyLjIzOSA1IDUgNWgxNGMyLjc2MiAwIDUtMi4yMzkgNS01di0xNGMwLTIuNzYxLTIuMjM4LTUtNS01em0tMTEgMTloLTN2LTExaDN2MTF6bS0xLjUtMTIuMjY4Yy0uOTY2IDAtMS43NS0uNzktMS43NS0xLjc2NHMuNzg0LTEuNzY0IDEuNzUtMS43NjQgMS43NS43OSAxLjc1IDEuNzY0LS43ODMgMS43NjQtMS43NSAxLjc2NHptMTMuNSAxMi4yNjhoLTN2LTUuNjA0YzAtMy4zNjgtNC0zLjExMy00IDB2NS42MDRoLTN2LTExaDN2MS43NjVjMS4zOTYtMi41ODYgNy0yLjc3NyA3IDIuNDc2djYuNzU5eiIvPjwvc3ZnPg==">
+					</a>
+				</li>
+				<li class="pull-left">
+					<a href="https://github.com/TyPhyter">
+						<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTkgMGgtMTRjLTIuNzYxIDAtNSAyLjIzOS01IDV2MTRjMCAyLjc2MSAyLjIzOSA1IDUgNWgxNGMyLjc2MiAwIDUtMi4yMzkgNS01di0xNGMwLTIuNzYxLTIuMjM4LTUtNS01em0tNC40NjYgMTkuNTljLS40MDUuMDc4LS41MzQtLjE3MS0uNTM0LS4zODR2LTIuMTk1YzAtLjc0Ny0uMjYyLTEuMjMzLS41NS0xLjQ4MSAxLjc4Mi0uMTk4IDMuNjU0LS44NzUgMy42NTQtMy45NDcgMC0uODc0LS4zMTItMS41ODgtLjgyMy0yLjE0Ny4wODItLjIwMi4zNTYtMS4wMTYtLjA3OS0yLjExNyAwIDAtLjY3MS0uMjE1LTIuMTk4LjgyLS42NC0uMTgtMS4zMjQtLjI2Ny0yLjAwNC0uMjcxLS42OC4wMDMtMS4zNjQuMDkxLTIuMDAzLjI2OS0xLjUyOC0xLjAzNS0yLjItLjgyLTIuMi0uODItLjQzNCAxLjEwMi0uMTYgMS45MTUtLjA3NyAyLjExOC0uNTEyLjU2LS44MjQgMS4yNzMtLjgyNCAyLjE0NyAwIDMuMDY0IDEuODY3IDMuNzUxIDMuNjQ1IDMuOTU0LS4yMjkuMi0uNDM2LjU1Mi0uNTA4IDEuMDctLjQ1Ny4yMDQtMS42MTQuNTU3LTIuMzI4LS42NjYgMCAwLS40MjMtLjc2OC0xLjIyNy0uODI1IDAgMC0uNzgtLjAxLS4wNTUuNDg3IDAgMCAuNTI1LjI0Ni44ODkgMS4xNyAwIDAgLjQ2MyAxLjQyOCAyLjY4OC45NDR2MS40ODljMCAuMjExLS4xMjkuNDU5LS41MjguMzg1LTMuMTgtMS4wNTctNS40NzItNC4wNTYtNS40NzItNy41OSAwLTQuNDE5IDMuNTgyLTggOC04czggMy41ODEgOCA4YzAgMy41MzMtMi4yODkgNi41MzEtNS40NjYgNy41OXoiLz48L3N2Zz4=">
+					</a>
+				</li>
+				<li class="pull-left">
+					<a href="https://stackoverflow.com/users/2226317/user2226317">
+						<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMCAwdjI0aDI0di0yNGgtMjR6bTEwLjQ4OCA4LjI3Mmw1LjUzMSAzLjI0My0uNjg2IDEuMTYyLTUuNTMyLTMuMjQzLjY4Ny0xLjE2MnptLTEuNDU2IDMuMTEzbDYuMTg1IDEuNzM5LS4zMzEgMS4yMy02LjIwNC0xLjY2Ny4zNS0xLjMwMnptLS42NzIgMi44MTNsNi40OTguNjUtLjExOCAxLjI4LTYuNTA0LS41ODYuMTI0LTEuMzQ0em0tLjE5MyAyLjQ2OWg2LjY2N3YxLjMzM2gtNi42Njd2LTEuMzMzem04LjgzMyAzLjMzM2gtMTF2LTdoMXY2aDl2LTZoMXY3em0tLjg1Mi04LjcwNGwtMy41Ni01LjIxOSAxLjExNS0uNzYgMy41NTkgNS4yMTktMS4xMTQuNzZ6bTEuMzU2LS44NDFsLTEuMDgtNi4yMjQgMS4zMjgtLjIzMSAxLjA4MSA2LjIyNC0xLjMyOS4yMzF6Ii8+PC9zdmc+">
+					</a>
+				</li>
+			</ul>
 		</div>
+	</div>
 
-		<div class="container" id="main-section">
-			<div class="row">
-				<div class="col-lg-12 col-md-12 col-sm-12">
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h2 class="panel-title">About Me</h2>
+	<div class="container" id="main-section">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h2 class="panel-title">About Me</h2>
+					</div>
+					<div class="panel-body">
+						<div class="flip3d-card" id="profile-pic">
+							<img src="assets/images/myface.jpg" class="img-responsive flip-front">
+							<div class="flip-back">BACK OF THE CARD</div>
 						</div>
-						<div class="panel-body">
-							<div class="flip3d-card" id="profile-pic">
-								<img src="assets/images/myface.jpg" class="img-responsive flip-front">
-								<div class="flip-back">BACK OF THE CARD</div>
-							</div>
-							<!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
+						<!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
 
-							<p class="matrix-transform">Spicy jalapeno bacon ipsum dolor amet ex ut duis laborum aute, leberkas aliquip beef ribeye chuck in pastrami. Shankle
-								qui picanha, strip steak kielbasa aliquip ea fatback rump fugiat ball tip. Doner bacon pork loin kevin chicken consequat
-								cupim shankle adipisicing. Cillum sint ball tip corned beef tenderloin ex rump, cupidatat pig burgdoggen meatloaf
-								ullamco magna dolore filet mignon. Burgdoggen ut anim mollit ad tri-tip, velit commodo shoulder. Fatback consectetur
-								elit kielbasa porchetta, buffalo ham veniam beef ribs.</p>
-							<p>Hamburger nostrud turducken biltong, sirloin qui meatball tenderloin shankle non bresaola ad dolore adipisicing fatback.
-								Ea fugiat ipsum, sint pig fatback nostrud. Adipisicing cow ground round, commodo duis eiusmod anim turducken sausage
-								kielbasa veniam doner minim. Sunt ground round exercitation strip steak, nisi do venison brisket salami commodo esse.
-								Tail swine corned beef ut sunt.</p>
-							<p class="matrix-transform">Spicy jalapeno bacon ipsum dolor amet ex ut duis laborum aute, leberkas aliquip beef ribeye chuck in pastrami. Shankle
-								qui picanha, strip steak kielbasa aliquip ea fatback rump fugiat ball tip. Doner bacon pork loin kevin chicken consequat
-								cupim shankle adipisicing. Cillum sint ball tip corned beef tenderloin ex rump, cupidatat pig burgdoggen meatloaf
-								ullamco magna dolore filet mignon. Burgdoggen ut anim mollit ad tri-tip, velit commodo shoulder. Fatback consectetur
-								elit kielbasa porchetta, buffalo ham veniam beef ribs.</p>
-							<p>Hamburger nostrud turducken biltong, sirloin qui meatball tenderloin shankle non bresaola ad dolore adipisicing fatback.
-								Ea fugiat ipsum, sint pig fatback nostrud. Adipisicing cow ground round, commodo duis eiusmod anim turducken sausage
-								kielbasa veniam doner minim. Sunt ground round exercitation strip steak, nisi do venison brisket salami commodo esse.
-								Tail swine corned beef ut sunt.</p>
-							<p class="matrix-transform">Spicy jalapeno bacon ipsum dolor amet ex ut duis laborum aute, leberkas aliquip beef ribeye chuck in pastrami. Shankle
-								qui picanha, strip steak kielbasa aliquip ea fatback rump fugiat ball tip. Doner bacon pork loin kevin chicken consequat
-								cupim shankle adipisicing. Cillum sint ball tip corned beef tenderloin ex rump, cupidatat pig burgdoggen meatloaf
-								ullamco magna dolore filet mignon. Burgdoggen ut anim mollit ad tri-tip, velit commodo shoulder. Fatback consectetur
-								elit kielbasa porchetta, buffalo ham veniam beef ribs.</p>
-							<p>Hamburger nostrud turducken biltong, sirloin qui meatball tenderloin shankle non bresaola ad dolore adipisicing fatback.
-								Ea fugiat ipsum, sint pig fatback nostrud. Adipisicing cow ground round, commodo duis eiusmod anim turducken sausage
-								kielbasa veniam doner minim. Sunt ground round exercitation strip steak, nisi do venison brisket salami commodo esse.
-								Tail swine corned beef ut sunt.</p>
-						</div>
+						<p class="matrix-transform">Spicy jalapeno bacon ipsum dolor amet ex ut duis laborum aute, leberkas aliquip beef ribeye chuck in pastrami. Shankle
+							qui picanha, strip steak kielbasa aliquip ea fatback rump fugiat ball tip. Doner bacon pork loin kevin chicken consequat
+							cupim shankle adipisicing. Cillum sint ball tip corned beef tenderloin ex rump, cupidatat pig burgdoggen meatloaf
+							ullamco magna dolore filet mignon. Burgdoggen ut anim mollit ad tri-tip, velit commodo shoulder. Fatback consectetur
+							elit kielbasa porchetta, buffalo ham veniam beef ribs.</p>
+						<p>Hamburger nostrud turducken biltong, sirloin qui meatball tenderloin shankle non bresaola ad dolore adipisicing fatback.
+							Ea fugiat ipsum, sint pig fatback nostrud. Adipisicing cow ground round, commodo duis eiusmod anim turducken sausage
+							kielbasa veniam doner minim. Sunt ground round exercitation strip steak, nisi do venison brisket salami commodo esse.
+							Tail swine corned beef ut sunt.</p>
+						<p class="matrix-transform">Spicy jalapeno bacon ipsum dolor amet ex ut duis laborum aute, leberkas aliquip beef ribeye chuck in pastrami. Shankle
+							qui picanha, strip steak kielbasa aliquip ea fatback rump fugiat ball tip. Doner bacon pork loin kevin chicken consequat
+							cupim shankle adipisicing. Cillum sint ball tip corned beef tenderloin ex rump, cupidatat pig burgdoggen meatloaf
+							ullamco magna dolore filet mignon. Burgdoggen ut anim mollit ad tri-tip, velit commodo shoulder. Fatback consectetur
+							elit kielbasa porchetta, buffalo ham veniam beef ribs.</p>
+						<p>Hamburger nostrud turducken biltong, sirloin qui meatball tenderloin shankle non bresaola ad dolore adipisicing fatback.
+							Ea fugiat ipsum, sint pig fatback nostrud. Adipisicing cow ground round, commodo duis eiusmod anim turducken sausage
+							kielbasa veniam doner minim. Sunt ground round exercitation strip steak, nisi do venison brisket salami commodo esse.
+							Tail swine corned beef ut sunt.</p>
+						<p class="matrix-transform">Spicy jalapeno bacon ipsum dolor amet ex ut duis laborum aute, leberkas aliquip beef ribeye chuck in pastrami. Shankle
+							qui picanha, strip steak kielbasa aliquip ea fatback rump fugiat ball tip. Doner bacon pork loin kevin chicken consequat
+							cupim shankle adipisicing. Cillum sint ball tip corned beef tenderloin ex rump, cupidatat pig burgdoggen meatloaf
+							ullamco magna dolore filet mignon. Burgdoggen ut anim mollit ad tri-tip, velit commodo shoulder. Fatback consectetur
+							elit kielbasa porchetta, buffalo ham veniam beef ribs.</p>
+						<p>Hamburger nostrud turducken biltong, sirloin qui meatball tenderloin shankle non bresaola ad dolore adipisicing fatback.
+							Ea fugiat ipsum, sint pig fatback nostrud. Adipisicing cow ground round, commodo duis eiusmod anim turducken sausage
+							kielbasa veniam doner minim. Sunt ground round exercitation strip steak, nisi do venison brisket salami commodo esse.
+							Tail swine corned beef ut sunt.</p>
 					</div>
 				</div>
 			</div>
-
 		</div>
-		<div id="push"></div>
+
+	</div>
+	<div id="push"></div>
 	</div>
 	<footer class="footer flex-center">
 		<div class="container">
@@ -155,6 +171,8 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 	 crossorigin="anonymous"></script>
 	<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+	<!--CDN link for  TweenMax-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
 	<script src="assets/javascript/index.js"></script>
 </body>
 
