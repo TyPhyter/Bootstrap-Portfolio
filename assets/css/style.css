@@ -277,46 +277,9 @@ hr {
     /* margin: 20px 30px 20px 30px; */
 }
 
-/* .flip3d-container {
-    position: relative;
-}
-
-.flip3d-card {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    transform-style: preserve-3d;
-    transition: all 0.5s ease;
-} */
-
-/* .flip3d-card:hover {
-    transform-origin: center right;
-    transform: rotateY(180deg);
-    
-} */
-
-/* .flip-front {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-    animation: 0.75s ease 0s infinite alternate example;
-}
-
-.flip-back {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-    background-color: white;
-    color: black;
-    transform: rotateY(180deg);
-} */
-
-
 #sidebar {
     position: fixed;
-    bottom: -240px; right: 0px;
+    bottom: -200px; right: 0px;
     z-index: 4;
     transition: bottom 0.5s ease-out;
     clip-path: polygon(0 15%, 30% 0, 70% 0, 100% 15%, 100% 100%, 0 100%);
@@ -335,27 +298,20 @@ hr {
     transform: rotate(-180deg);
 }
 
-/* #sidebar:hover {
-    bottom: -25px;
-}
-
-#sidebar:hover .glyphicon {
-    transform: rotate(-180deg);
-} */
-
 .showSidebar {
     bottom: -25px !important;
 }
 
 #sidebar ul {
     width: 50px;
-    margin: 40px auto 0px;
+    margin: 0px auto 0px;
     text-align: center;
 }
 
 #sidebar li {
     display: block;
     width: 100%;
+    box-shadow: -2px 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 #sidebar li img {

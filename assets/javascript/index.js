@@ -84,8 +84,3 @@ $(".flip3d-card").flip({
     "back": ".flip-back"
 });
 
-// $(document).on("click", ".flip3d-card", function(){
-//     console.log("click");
-//     console.log($(this));
-//     $(this).flip(toggle);
-// });
