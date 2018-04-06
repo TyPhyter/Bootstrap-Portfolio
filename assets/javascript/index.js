@@ -2,12 +2,13 @@ var $navbar = $(".navbar");
 var $navBrand = $(".navbar-brand");
 var $sidebar = $("#sidebar");
 var $sidebarIcon = $("#sidebar-icon");
+var sidebarShownOnce = false;
 var sticky = $navbar.offset().top + 20;
 var glitchTimer;
 
 var path = window.location.pathname;
 var page = path.split("/").pop();
-if(page === "index.html"){
+if (page === "index.html") {
     $navbar.hide();
 }
 
@@ -15,20 +16,20 @@ function autoGlitch($element) {
 
     var randomInt;
     //check for LACK of active class, we're toggling afterward
-    if(!$element.hasClass("glitch-active")){
-        randomInt = Math.random()*1500;
+    if (!$element.hasClass("glitch-active")) {
+        randomInt = Math.random() * 1500;
     } else {
-        randomInt = Math.random()*5000;
+        randomInt = Math.random() * 5000;
     }
     console.log(randomInt);
-    if($element){
+    if ($element) {
         $element.toggleClass("glitch-active");
         clearInterval(glitchTimer);
-        glitchTimer = setTimeout(function() {
-            console.log("new interval");    
+        glitchTimer = setTimeout(function () {
+            console.log("new interval");
             autoGlitch($element);
         }, randomInt);
-    } 
+    }
 }
 
 // $navbar.hide();
@@ -37,7 +38,7 @@ function autoGlitch($element) {
 //     $(this).flip("toggle");
 //     console.log("click");
 // })
-glitchTimer = setInterval(function(){
+glitchTimer = setInterval(function () {
     autoGlitch($navBrand);
 }, 3000);
 
@@ -47,29 +48,34 @@ $(document).ready(function () {
         if (Math.round($(window).scrollTop()) >= sticky) {
             $navbar.show();
             $navbar.addClass("scrolled sticky");
-            $sidebar.addClass("showSidebar");
-            $sidebarIcon.addClass("rotateIcon");
-            // TweenMax.to("#sidebar", .5, {css:{right:0}, ease:Power2.easeIn});
+            if (!sidebarShownOnce) {
+                $sidebar.addClass("showSidebar");
+                $sidebarIcon.addClass("rotateIcon");
+                sidebarShownOnce = true;
+            }
         } else {
-            if(page === "index.html"){
+            if (page === "index.html") {
                 $navbar.hide();
             }
             $navbar.removeClass("scrolled sticky");
-            $sidebar.removeClass("showSidebar");
-            $sidebarIcon.removeClass("rotateIcon");
-            // TweenMax.to("#sidebar", .5, {css:{right:-85}, ease:Power2.easeIn});
+            if (Math.round($(window).scrollTop()) < sticky) {
+                $sidebar.removeClass("showSidebar");
+                $sidebarIcon.removeClass("rotateIcon");
+            }
         }
     });
 
-    $sidebarIcon.on("click", function(evt){
+    $sidebarIcon.on("click", function (evt) {
         $sidebarIcon.toggleClass("rotateIcon");
         $sidebar.toggleClass("showSidebar");
     });
     var nameTimeLine = new TimelineMax();
-    nameTimeLine.to("#SVGnameText", 2, {attr:{x:10}, ease:SteppedEase.config(12)});
-    nameTimeLine.to("#SVGnameText", 1, {attr:{y:75}, ease:Power2.easeOut});
-    nameTimeLine.to("#SVGtagLine1", 2, {attr:{x:10}, ease:SteppedEase.config(24)});
-    nameTimeLine.to("#SVGtagLine1", .75, {attr:{y:60}, delay: 0.1, ease:Power2.easeOut});
+    nameTimeLine.to("#SVGnameText", 2, { attr: { x: 10 }, ease: SteppedEase.config(12) });
+    nameTimeLine.to("#SVGnameText", 1, { attr: { y: 75 }, ease: Power2.easeOut });
+    nameTimeLine.to("#SVGtagLine1", 2, { attr: { x: 10 }, ease: SteppedEase.config(24) });
+    nameTimeLine.to("#SVGtagLine1", .75, { attr: { y: 60 }, delay: 0.1, ease: Power2.easeOut });
+    nameTimeLine.to(window, 1, {scrollTo:{ y:sticky }, delay: 2, ease:Power2.easeInOut});
+
 });
 
 $(".flip3d-card").flip({

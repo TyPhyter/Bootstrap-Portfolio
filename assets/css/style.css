@@ -66,9 +66,9 @@ body {
 }
 
 
-.sticky + #main-section {
-    padding-top: 70px;
-}
+/* .sticky + .panel {
+    margin-top: 100px;
+} */
 
 .scrolled {
     background: white;
@@ -486,9 +486,9 @@ header video {
     z-index: 0;
     width: 100vw; 
     height: 100vh;
-    position: fixed;
+    /* position: fixed;
     top: 0;
-    left: 0;
+    left: 0; */
 }
 svg { 
     width: 100%;
