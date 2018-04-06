@@ -1,6 +1,7 @@
 var $navbar = $(".navbar");
 var $navBrand = $(".navbar-brand");
 var $sidebar = $("#sidebar");
+var $sidebarIcon = $("#sidebar-icon");
 var sticky = $navbar.offset().top + 20;
 var glitchTimer;
 
@@ -46,14 +47,23 @@ $(document).ready(function () {
         if (Math.round($(window).scrollTop()) >= sticky) {
             $navbar.show();
             $navbar.addClass("scrolled sticky");
-            TweenMax.to("#sidebar", .5, {css:{right:0}, ease:Power2.easeIn});
+            $sidebar.addClass("showSidebar");
+            $sidebarIcon.addClass("rotateIcon");
+            // TweenMax.to("#sidebar", .5, {css:{right:0}, ease:Power2.easeIn});
         } else {
             if(page === "index.html"){
                 $navbar.hide();
             }
             $navbar.removeClass("scrolled sticky");
-            TweenMax.to("#sidebar", .5, {css:{right:-85}, ease:Power2.easeIn});
+            $sidebar.removeClass("showSidebar");
+            $sidebarIcon.removeClass("rotateIcon");
+            // TweenMax.to("#sidebar", .5, {css:{right:-85}, ease:Power2.easeIn});
         }
+    });
+
+    $sidebarIcon.on("click", function(evt){
+        $sidebarIcon.toggleClass("rotateIcon");
+        $sidebar.toggleClass("showSidebar");
     });
     var nameTimeLine = new TimelineMax();
     nameTimeLine.to("#SVGnameText", 2, {attr:{x:10}, ease:SteppedEase.config(12)});

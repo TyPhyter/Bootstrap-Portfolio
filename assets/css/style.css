@@ -316,19 +316,40 @@ hr {
 
 #sidebar {
     position: fixed;
-    bottom: 75px; right:-85px;
+    bottom: -240px; right: 0px;
     z-index: 4;
+    transition: bottom 0.5s ease-out;
+    clip-path: polygon(0 15%, 30% 0, 70% 0, 100% 15%, 100% 100%, 0 100%);
+    background-color: #888;
+    text-align: center;
 }
 
-#sidebar h2 {
-    color: #b3d4fc;
+#sidebar-icon {
+    top: 5px;
+    color: black;
     font-size: 24px;
-    margin: 10px;
+    transition: transform 0.8s ease-out;
+}
+
+.rotateIcon {
+    transform: rotate(-180deg);
+}
+
+/* #sidebar:hover {
+    bottom: -25px;
+}
+
+#sidebar:hover .glyphicon {
+    transform: rotate(-180deg);
+} */
+
+.showSidebar {
+    bottom: -25px !important;
 }
 
 #sidebar ul {
     width: 50px;
-    margin: 10px auto;
+    margin: 40px auto 0px;
     text-align: center;
 }
 
