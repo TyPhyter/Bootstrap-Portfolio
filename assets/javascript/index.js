@@ -46,16 +46,20 @@ $(document).ready(function () {
         if (Math.round($(window).scrollTop()) >= sticky) {
             $navbar.show();
             $navbar.addClass("scrolled sticky");
+            TweenMax.to("#sidebar", .5, {css:{right:0}, ease:Power2.easeIn});
         } else {
             if(page === "index.html"){
                 $navbar.hide();
             }
             $navbar.removeClass("scrolled sticky");
+            TweenMax.to("#sidebar", .5, {css:{right:-85}, ease:Power2.easeIn});
         }
     });
     var nameTimeLine = new TimelineMax();
-    nameTimeLine.to("#SVGnameText", 3, {attr:{x:0}, ease:SteppedEase.config(12)});
-    nameTimeLine.to("#SVGnameText", 2, {attr:{y:75}, ease:Power1.easeOut});
+    nameTimeLine.to("#SVGnameText", 2, {attr:{x:10}, ease:SteppedEase.config(12)});
+    nameTimeLine.to("#SVGnameText", 1, {attr:{y:75}, ease:Power2.easeOut});
+    nameTimeLine.to("#SVGtagLine1", 2, {attr:{x:10}, ease:SteppedEase.config(24)});
+    nameTimeLine.to("#SVGtagLine1", .75, {attr:{y:60}, delay: 0.1, ease:Power2.easeOut});
 });
 
 $(".flip3d-card").flip({
