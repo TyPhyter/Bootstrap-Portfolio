@@ -252,6 +252,7 @@ hr {
 
 #main-section {
     z-index: 3;
+    height: 100vh;
 }
 
 #main-section * {
@@ -267,7 +268,14 @@ hr {
 #main-section p {
     margin: 30px 20px;
     line-height: 1.2;
+    font-size: 18px;
 }
+
+#about-me {
+    margin-top: 90px;
+    text-align: center;
+}
+
 
 #profile-pic {
     width: 200px;
