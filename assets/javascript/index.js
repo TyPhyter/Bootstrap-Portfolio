@@ -70,16 +70,20 @@ $(document).ready(function () {
         $sidebar.toggleClass("showSidebar");
     });
 
-    TweenMax.to("#main-section", 0, {rotationY:-90, transformOrigin:"50% 50% -400px"});
-    TweenMax.to("#last-line", 0, { rotationY:-90, transformOrigin: "50% 50% -400px"});
+    //TweenMax.to("#main-section", 0, { rotationY: -90, transformOrigin: "50% 50% -400px" });
+    //TweenMax.to("#last-line", 0, { rotationY: -90, transformOrigin: "50% 50% -400px" });
+    TweenMax.to("#my-face", 0, { rotationY: -90 });
+    TweenMax.to("#about-me", 0, { rotationY: 90, transformOrigin: "50% 50% -400px" });
     var nameTimeLine = new TimelineMax();
     nameTimeLine.to("#SVGnameText", 2, { attr: { x: 10 }, ease: SteppedEase.config(12) });
     nameTimeLine.to("#SVGnameText", 1, { attr: { y: 75 }, ease: Power2.easeOut });
     nameTimeLine.to("#SVGtagLine1", 2, { attr: { x: 10 }, ease: SteppedEase.config(24) });
     nameTimeLine.to("#SVGtagLine1", .75, { attr: { y: 60 }, delay: 0.1, ease: Power2.easeOut });
-    nameTimeLine.to(window, 1, {scrollTo:{ y:sticky }, delay: 2, ease:Power2.easeInOut});
-    nameTimeLine.to("#main-section", 1, {rotationY:0, transformOrigin:"50% 50% -400px", ease: Power2.easeInOut});
-    nameTimeLine.to("#last-line", 1, { rotationY:0, transformOrigin:"50% 50% -400px", ease: Power2.easeInOut});
+    nameTimeLine.to(window, 1, { scrollTo: { y: sticky }, delay: 2, ease: Power2.easeInOut });
+    nameTimeLine.to("#my-face", 0, { rotationY: 0});
+    nameTimeLine.to("#about-me", 0, { rotationY: -0, transformOrigin: "50% 50% -400px" });
+    //nameTimeLine.to("#main-section", 1, { rotationY: 0, transformOrigin: "50% 50% -400px", ease: Power2.easeInOut });
+    //nameTimeLine.to("#last-line", 1, { rotationY: 0, transformOrigin: "50% 50% -400px", ease: Power2.easeInOut });
 
 });
 

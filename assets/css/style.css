@@ -129,6 +129,7 @@ body {
 
 h1, h2 {
     font-weight: 900;
+    font-size: 64px;
 }
 
 h3, h4 {
@@ -251,8 +252,12 @@ hr {
 } */
 
 #main-section {
+    position: relative;
     z-index: 3;
-    height: 100vh;
+    min-height: 100vh;
+    margin-top: 70px;
+    background: #333;
+    text-align: center;
 }
 
 #main-section * {
@@ -268,21 +273,71 @@ hr {
 #main-section p {
     margin: 30px 20px;
     line-height: 1.2;
-    font-size: 18px;
+    font-size: 16px;
 }
 
+.inner-contain {
+    width: 80%;
+    margin: auto;
+}
+
+#my-face {
+    width: 100%;
+    margin-top: 20px;
+    /* float: left; */
+    transition: all 0.2s ease;
+}
+
+#my-face:hover {
+    transform: scale(1.25);
+}
+
+
 #about-me {
-    margin-top: 90px;
+    margin-top: 20px;
+    text-align: right;
+    /* float: right; */
+}
+
+#about-header {
+    text-align: center; 
+    margin-top:20px;
+}
+
+#skills {
+    position: relative;
+    z-index: 3;
+    min-height: 100vh;
+    margin-top: 70px;
+    background: #ccc;
     text-align: center;
 }
 
+.skill {
+    width: 128px;
+    height: 128px;
+    margin: 20px 5px;
+}
 
-#profile-pic {
-    width: 200px;
-    height: 200px;
-    margin: auto;
-    /* float: left; */
-    /* margin: 20px 30px 20px 30px; */
+.skill img {
+    width: 128px;
+    margin-left: -15px;
+    margin-top: 24px;
+    
+}
+
+.skill svg {
+    position: relative;
+}
+
+#work {
+    position: relative;
+    z-index: 3;
+    min-height: 100vh;
+    margin-top: 70px;
+    background: #777;
+    text-align: center;
+    color: #333
 }
 
 #sidebar {
@@ -384,13 +439,8 @@ form textarea {
 /* PORTFOLIO PAGE */
 
 .portfolio-project {
-    margin: 20px;
-    width: 280px;
-    height: 180px;
-    position: relative;
-    display: inline-block;
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
-    transition: all .2s ease-in-out;
+    width: 500px;
+    height: 300px;
 }
 
 .portfolio-project img {
@@ -399,14 +449,14 @@ form textarea {
 }
 
 .portfolio-project-large {
-    width: 500px;
-    height: 300px;
+    /* width: 500px;
+    height: 300px; */
 }
 
 /* On mouse-over, add a deeper shadow */
 .portfolio-project:hover {
     /* box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 12px 26px 0 rgba(0, 0, 0, 0.19); */
-    transform: scale(1.05);
+    transform: translateZ(15px);
 }
 
 .project-banner {
@@ -433,9 +483,33 @@ form textarea {
     h1 {
         text-align: center;
         width: 100%;
-        font-size: 63px;
+        font-size: 48px;
     }
 
+    .mobile-hide {
+        display: none;
+    }
+
+    #about-header {
+        margin-top: 5px;
+    }
+
+    #my-face {
+        max-width: 65vh;
+        max-height: 65vh;
+    }
+
+    /* .portfolio-project {
+        width: 80%;
+
+    } */
+
+}
+
+@media screen and (max-width: 992px) {
+    .mobile-hide {
+        display: none;
+    }
 }
 
 header { 
