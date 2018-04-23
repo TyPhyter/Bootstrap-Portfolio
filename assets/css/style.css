@@ -441,6 +441,7 @@ form textarea {
 .portfolio-project {
     width: 500px;
     height: 300px;
+    margin: 10px 25px 25px
 }
 
 .portfolio-project img {
