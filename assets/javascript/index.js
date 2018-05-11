@@ -91,6 +91,23 @@ $(document).ready(function() {
 
         });
 
+        $('#send-email-btn').on('click', function (evt) {
+            evt.preventDefault();
+            let recipient = "tyler@typhyter.com";
+            let subject = $('input[name="name"]').val().trim() + " " + $('input[name="mail"]').val().trim();
+            let body = $('textarea[name="comment"]').val().trim();
+            $.post('https://frozen-eyrie-20216.herokuapp.com/email', {
+                recipient,
+                subject,
+                body
+            }, function (err, response) {
+                if(err){
+                    console.log(err);
+                }
+                console.log(response);
+            });
+        });
+
         $sidebarIcon.on("click", function (evt) {
             $sidebarIcon.toggleClass("rotateIcon");
             $sidebar.toggleClass("showSidebar");
