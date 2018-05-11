@@ -64,6 +64,33 @@ $(document).ready(function() {
             }
         });
 
+        $('#about-button').on('click', function (evt) {
+            evt.preventDefault();
+            $about = $('#main-section');
+            TweenMax.to(window, 1, { scrollTo: { y: $about.offset().top + 25 }, ease: Power2.easeInOut });
+
+        });
+
+        $('#skills-button').on('click', function (evt) {
+            evt.preventDefault();
+            $skills = $('#skills');
+            TweenMax.to(window, 1, { scrollTo: { y: $skills.offset().top }, ease: Power2.easeInOut });
+
+        });
+
+        $('#portfolio-button').on('click', function (evt) {
+            evt.preventDefault();
+            $work = $('#work');
+            TweenMax.to(window, 1, { scrollTo: { y: $work.offset().top  }, ease: Power2.easeInOut });
+        });
+
+        $('#contact-button').on('click', function (evt) {
+            evt.preventDefault();
+            $contact = $('#contact');
+            TweenMax.to(window, 1, { scrollTo: { y: $contact.offset().top  }, ease: Power2.easeInOut });
+
+        });
+
         $sidebarIcon.on("click", function (evt) {
             $sidebarIcon.toggleClass("rotateIcon");
             $sidebar.toggleClass("showSidebar");
@@ -71,14 +98,14 @@ $(document).ready(function() {
 
         //TweenMax.to("#main-section", 0, { rotationY: -90, transformOrigin: "50% 50% -400px" });
         //TweenMax.to("#last-line", 0, { rotationY: -90, transformOrigin: "50% 50% -400px" });
-        TweenMax.to("#my-face", 0, { rotationY: -90 });
-        TweenMax.to("#about-me", 0, { rotationY: 90, transformOrigin: "50% 50% -400px" });
+        //TweenMax.to("#my-face", 0, { rotationY: -90 });
+        //TweenMax.to("#about-me", 0, { rotationY: 90, transformOrigin: "50% 50% -400px" });
         var nameTimeLine = new TimelineMax();
         nameTimeLine.to("#SVGnameText", 2, { attr: { x: 10 }, ease: SteppedEase.config(12) });
         nameTimeLine.to("#SVGnameText", 1, { attr: { y: 75 }, ease: Power2.easeOut });
         nameTimeLine.to("#SVGtagLine1", 2, { attr: { x: 10 }, ease: SteppedEase.config(24) });
         nameTimeLine.to("#SVGtagLine1", .75, { attr: { y: 60 }, delay: 0.1, ease: Power2.easeOut });
-        nameTimeLine.to(window, 1, { scrollTo: { y: sticky }, delay: 2, ease: Power2.easeInOut });
+        nameTimeLine.to(window, 1, { scrollTo: { y: sticky+5 }, delay: 0.75, ease: Power2.easeInOut });
         nameTimeLine.to("#my-face", 0, { rotationY: 0 });
         nameTimeLine.to("#about-me", 0, { rotationY: -0, transformOrigin: "50% 50% -400px" });
         //nameTimeLine.to("#main-section", 1, { rotationY: 0, transformOrigin: "50% 50% -400px", ease: Power2.easeInOut });
@@ -91,5 +118,9 @@ $(document).ready(function() {
         "front": ".flip-front",
         "back": ".flip-back"
     });
+
+    $('.nav-item.disabled').on('click', function (evt) {
+        evt.preventDefault();
+    })
 
 });

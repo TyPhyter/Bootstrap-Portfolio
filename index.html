@@ -49,7 +49,7 @@
 			</header>
 		</div>
 		<div id="background-overlay"></div>
-		<nav class="navbar navbar-default">
+		<nav class="navbar navbar-default" id="sticky-header">
 			<div class="container">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
@@ -65,18 +65,23 @@
 					</div>
 				</div>
 				<ul class="nav navbar-nav navbar-right collapse navbar-collapse" id="navbar-collapse-1">
-					<li class="active">
-						<a href="index.html">About
+					<li class="" id="about-button">
+						<a href="#main-section">About
 							<span class="sr-only">(current)</span>
 						</a>
 					</li>
-					<li>
-						<a href="portfolio.html">Portfolio
+					<li class="" id="skills-button">
+						<a href="#skills">Skills
 							<span class="sr-only">(current)</span>
 						</a>
 					</li>
-					<li>
-						<a href="contact.html">Contact
+					<li id="portfolio-button">
+						<a href="#work">Portfolio
+							<span class="sr-only">(current)</span>
+						</a>
+					</li>
+					<li id="contact-button">
+						<a href="#contact">Contact
 							<span class="sr-only">(current)</span>
 						</a>
 					</li>
@@ -90,19 +95,22 @@
 		<span class="glyphicon glyphicon-circle-arrow-up" id="sidebar-icon" aria-hidden="true"></span>
 		<div class="panel-body flex-center">
 			<ul>
-				<li class="pull-left">
-					<a href="https://www.linkedin.com/in/tyler-jenkins-834a5b4b/">
-						<img src="./assets/images/linkedin.png">
-					</a>
-				</li>
+
 				<li class="pull-left">
 					<a href="https://github.com/TyPhyter">
 						<img src="./assets/images/github.png">
 					</a>
 				</li>
 				<li class="pull-left">
-					<a href="https://stackoverflow.com/users/2226317/user2226317">
-						<img src="./assets/images/stackoverflow.png">
+					<a href="https://www.linkedin.com/in/tyler-jenkins-834a5b4b/">
+						<img src="./assets/images/linkedin.png">
+					</a>
+				</li>
+
+				<li class="pull-left">
+					<a href=""></a>
+					<!-- https://stackoverflow.com/users/2226317/user2226317" -->
+					<img src="./assets/images/stackoverflow.png">
 					</a>
 				</li>
 			</ul>
@@ -269,51 +277,165 @@
 		</div>
 	</div>
 	<div class="container" id="work">
+
 		<h1 style="margin:20px 0 20px"> my work </h1>
-		<div class="row">
-			<div class="col-xs-12 col-md-6">
-				<div class="portfolio-project portfolio-project-large flip3d-card">
-					<div class="flip-front">
-						<!-- <a href="https://typhyter.github.io/RPS-Multiplayer"> -->
+
+		<div class="row text-center">
+			<ul class="nav nav-tabs" id="myTab" role="tablist">
+				<li class="nav-item active">
+					<a class="nav-link" id="proj1-tab" data-toggle="tab" href="#proj1" role="tab" aria-controls="proj1" aria-selected="true">Multiplayer Roshambo</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" id="proj2-tab" data-toggle="tab" href="#proj2" role="tab" aria-controls="proj2" aria-selected="false">GifTastic</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" id="proj3-tab" data-toggle="tab" href="#proj3" role="tab" aria-controls="proj3" aria-selected="false">FantasyBurgerVRdLUX</a>
+				</li>
+				<li class="nav-item disabled">
+					<!-- href removed -->
+					<a class="nav-link" id="proj4-tab" data-toggle="tab" role="tab" aria-controls="proj4" aria-selected="false">BeerHunter</a>
+				</li>
+			</ul>
+		</div>
+		<div class="tab-content" id="myTabContent">
+
+			<div class="tab-pane in active" id="proj1" role="tabpanel" aria-labelledby="proj1-tab">
+				<div class="row">
+					<div class="col-xs-12 col-md-6" style="padding:0;">
 						<img class="img-responsive" src="assets/images/multiplayerRPS.png">
-						<div class="project-banner">
-							MultiPlayer RPS
+						<div class="labels ">
+							<span class="label label-warning">javascript</span>
+							<span class="label label-default">firebase</span>
+							<span class="label label-primary">bootstrap</span>
+							<span class="label label-default">jQuery</span>
+						</div>
+
+					</div>
+					<div class="col-xs-12 col-md-6" style="padding:0;">
+						<br>
+						<br>
+						<br>
+						<p class="mb-3">Real-time multiplayer Rock-Paper-Scissors and Chatroom via Firebase.</p>
+						<p>Chat with your opponent and choose your move to engage in Roshambo!</p>
+						<p>
+							<span>
+								<a href="https://typhyter.github.io/RPS-Multiplayer/">Try it out!</a>
+							</span>
+							|
+							<span>
+								<a href="https://github.com/TyPhyter/RPS-Multiplayer">Github</a>
+							</span>
+						</p>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="tab-pane" id="proj2" role="tabpanel" aria-labelledby="proj2-tab">
+
+				<div class="row mr-4 ml-4">
+					<div class="col-xs-12 col-md-6">
+						<img class="img-responsive mt-4" src="assets/images/giftastic.png">
+						<div class="labels ">
+							<span class="label label-warning">javascript</span>
+							<span class="label label-primary">bootstrap</span>
+							<span class="label label-default">jQuery</span>
 						</div>
 					</div>
-					<div class="flip-back" style="width:100%; height:100%;"> BACK </div>
+					<div class="col-xs-12 col-md-6" style="padding:0;">
+						<br>
+						<br>
+						<br>
+						<p>A web application that uses the Giphy API to generate pages of GIFs related to a user-defined category.</p>
+						<p>Enter a category to find GIFs, click the image to play/pause!</p>
+						<p>
+							<span>
+								<a href="https://typhyter.github.io/GifTastic/">Try it out!</a>
+							</span>
+							|
+							<span>
+								<a href="https://github.com/TyPhyter/GifTastic/">Github</a>
+							</span>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="tab-pane" id="proj3" role="tabpanel" aria-labelledby="proj3-tab">
+
+				<div class="row mr-4 ml-4">
+					<div class="col-xs-12 col-md-6">
+						<img class="img-responsive mt-4" src="assets/images/fullstackburger.png">
+						<div class="labels ">
+							<span class="label label-warning">javascript</span>
+							<span class="label label-primary">bootstrap</span>
+
+							<span class="label" style="background: slateblue">mySQL</span>
+							<span class="label label-warning">handlebars</span>
+						</div>
+						<div class="labels">
+							<span class="label label-default">nodeJS</span>
+							<span class="label label-success">express</span>
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-6" style="padding:0;">
+						<br>
+						<br>
+						<br>
+						<p>A demonstration of my abilities to construct a fullstack application from bottom to top!</p>
+						<p>Describe your fantasy burger in the test field, submit it to a hosted MySQL database, and click to devour it!</p>
+						<p>
+							<span>
+								<a href="https://blooming-savannah-22809.herokuapp.com/">Try it out!</a>
+							</span>
+							|
+							<span>
+								<a href="https://github.com/TyPhyter/fullstack-burger/">Github</a>
+							</span>
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
-		<!-- <div class="col-xs-12 col-md-6">
-				<div class="portfolio-project portfolio-project-large flip3d-card">
-					<a href="https://typhyter.github.io/week-4-game/">
-					<div class="flip-front">
-						<img class="img-responsive" src="assets/images/darthstone.png">
-						<div class="project-banner">
-							Darthstone
-						</div>
-					</div>
-					<div class="flip-back" style="width:100%; height:100%;"> BACK </div>
-				</div>
-			</div> -->
-		<div class="row">
-			<div class="col-xs-12 col-md-6">
-				<div class="portfolio-project portfolio-project-large flip3d-card">
-					<div class="flip-front">
-						<!-- <a href="https://typhyter.github.io/GifTastic/"> -->
-						<img class="img-responsive" src="assets/images/giftastic.png">
-						<div class="project-banner">
-							GifTastic
-						</div>
-					</div>
-					<div class="flip-back" style="width:100%; height:100%;"> BACK </div>
-				</div>
-			</div>
-		</div>
+
 	</div>
-	</div>
+
+
 	<div class="container" id="contact">
-		<h1> let's talk </h1>
+		<div class="bg-custom">
+			<h1> let's talk </h1>
+			<div class="container text-center">
+				<div class="row" style="margin-top: 50px;">
+					<div class="col-xs-12 col-sm-6 flex-center">
+						<br>
+						<p>I'm currently accepting offers for new work! Drop me a line with some information about your project and let's make
+							it happen!</p>
+						<br>
+					</div>
+					<div class="col-xs-12 col-sm-6">
+						<form action="mailto:tyler@typhyter.com" method="post" enctype="text/plain" id="contact-form">
+							<span>
+								Name:
+								<input class="form-control" type="text" name="name">
+							</span>
+							<span>
+								E-mail:
+								<input class="form-control" type="text" name="mail">
+							</span>
+
+							<br> Comment:
+							<br>
+							<textarea class="form-control" type="text" name="comment" size="50"></textarea>
+							<br>
+							<br>
+							<button class="btn btn-default" type="submit" value="Send">Send</button>
+						</form>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
 	</div>
 
 	<div id="push"></div>
