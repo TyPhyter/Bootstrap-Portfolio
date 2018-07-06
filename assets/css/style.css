@@ -347,6 +347,7 @@ hr {
 
 .skill svg {
     position: relative;
+    max-width: 90%;
 }
 
 #work {
@@ -592,7 +593,9 @@ svg > rect {
 }
 
 .nav-tabs > li > a {
-    color: #444
+    color: #444;
+    border-color: white;
+    border-bottom-color: transparent;
 }
 
 .nav-item.active {
@@ -619,8 +622,15 @@ svg > rect {
 
 @media screen and (max-width: 768px) {
     .tab-pane {
-        height: 70vh;
+        height: 100%;
     }
+
+    .nav-tabs > li > a {
+        font-size: small;
+        
+    }
+
+    
 }
 .tab-pane img {
     width: 80%;
