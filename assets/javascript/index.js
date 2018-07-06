@@ -10,7 +10,7 @@ $(document).ready(function () {
     const $messageError = $('#messageError');
     $messageError.hide();
     var sidebarShownOnce = false;
-    var sticky = $navbar.offset().top;
+    var sticky = $navbar.offset().top - 5;
     var glitchTimer;
 
     var path = window.location.pathname;
@@ -59,9 +59,9 @@ $(document).ready(function () {
                 sidebarShownOnce = true;
             }
         } else {
-            if (page === "index.html") {
-                $navbar.hide();
-            }
+            
+            $navbar.hide();
+            
             $navbar.removeClass("scrolled sticky");
             if (Math.round($(window).scrollTop()) < sticky) {
                 $sidebar.removeClass("showSidebar");
